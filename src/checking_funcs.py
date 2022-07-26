@@ -28,7 +28,7 @@ def box_check(board ,pos_idx ,value):
 
 def is_correct(board, pos_idx, value):
     return (
-            (board[pos_idx] == 0 or board[pos_idx] is None) 
+            board[pos_idx] == 0
                 and row_check(board, pos_idx, value)
                 and col_check(board, pos_idx, value)
                 and box_check(board, pos_idx, value)
