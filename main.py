@@ -15,4 +15,4 @@ if __name__ == "__main__":
     solve_sudoku(board)
     print_board(board)
     res = check_board_correctness(board)
-    print(res)
+    print(f"\nIs board correct? {res}")
