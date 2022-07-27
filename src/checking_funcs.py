@@ -26,10 +26,13 @@ def sep_box(board, pos_idx):
 def box_check(board ,pos_idx ,value):
     return not any(value == i for i in sep_box(board, pos_idx))
 
+DIGITS = set((1,2,3,4,5,6,7,8,9))
+
+def get_correct_digits(board, pos_idx):
+    return tuple(DIGITS - set(sep_row(board, pos_idx)) - set(sep_col(board, pos_idx)) - set(sep_box(board, pos_idx)))
+
 def is_correct(board, pos_idx, value):
     return (
             board[pos_idx] == 0
-                and row_check(board, pos_idx, value)
-                and col_check(board, pos_idx, value)
-                and box_check(board, pos_idx, value)
+                and value in get_correct_digits(board, pos_idx)
             )

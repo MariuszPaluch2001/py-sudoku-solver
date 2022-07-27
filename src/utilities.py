@@ -11,7 +11,7 @@ def solve_sudoku(board):
     pos_idx = find_empty_cell(board)
 
     if pos_idx is None:
-        return board
+        return True
 
     shuffled_numbers = list(range(1, 10))
     random.shuffle(shuffled_numbers)
