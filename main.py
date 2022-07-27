@@ -1,6 +1,7 @@
 from src.utilities import solve_sudoku, print_board
 from src.check_board import check_board_correctness
 from src.sudoku_read import load_sudoku_from_file
+
 if __name__ == "__main__":
     board = [5,4,0,8,0,7,9,3,0,
              0,0,0,6,4,0,0,1,5,
